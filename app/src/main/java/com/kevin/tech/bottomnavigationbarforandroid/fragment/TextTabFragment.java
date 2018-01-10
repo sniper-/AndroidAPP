@@ -14,10 +14,10 @@ import android.widget.TextView;
 
 import com.kevin.tech.bottomnavigationbarforandroid.Constants;
 import com.kevin.tech.bottomnavigationbarforandroid.R;
-import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.HomeFragment;
-import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.LikeFragment;
-import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.LocationFragment;
-import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.PersonFragment;
+import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.FragmentHome;
+import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.FragmentDash;
+import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.FragmentNotice;
+import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.FragmentMine;
 
 /**
  * Created by Kevin on 2016/11/29.
@@ -27,16 +27,16 @@ import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.PersonF
 
 public class TextTabFragment extends Fragment implements View.OnClickListener {
     private TextView mTHome, mTLocation, mTLike, mTMe, mTextView;
-    private HomeFragment mHomeFragment;
-    private LocationFragment mLocationFragment;
-    private LikeFragment mLikeFragment;
-    private PersonFragment mPersonFragment;
+    private FragmentHome mHomeFragment;
+    private FragmentNotice mLocationFragment;
+    private FragmentDash mLikeFragment;
+    private FragmentMine mPersonFragment;
 
     public static TextTabFragment newInstance(String s) {
         TextTabFragment viewPagerFragment = new TextTabFragment();
-        Bundle bundle = new Bundle();
-        bundle.putString(Constants.ARGS, s);
-        viewPagerFragment.setArguments(bundle);
+//        Bundle bundle = new Bundle();
+//        bundle.putString(Constants.ARGS, s);
+//        viewPagerFragment.setArguments(bundle);
         return viewPagerFragment;
     }
 
@@ -111,21 +111,21 @@ public class TextTabFragment extends Fragment implements View.OnClickListener {
                 }
                 transaction.replace(R.id.sub_content, mHomeFragment);
                 break;
-            case 1:
+            case 2:
                 if (mLocationFragment == null) {
-                    mLocationFragment = LocationFragment.newInstance(getString(R.string.item_location));
+                    mLocationFragment = FragmentNotice.newInstance(getString(R.string.item_location));
                 }
                 transaction.replace(R.id.sub_content, mLocationFragment);
                 break;
-            case 2:
+            case 1:
                 if (mLikeFragment == null) {
-                    mLikeFragment = LikeFragment.newInstance(getString(R.string.item_like));
+                    mLikeFragment = FragmentDash.newInstance(getString(R.string.item_like));
                 }
                 transaction.replace(R.id.sub_content, mLikeFragment);
                 break;
             case 3:
                 if (mPersonFragment == null) {
-                    mPersonFragment = PersonFragment.newInstance(getString(R.string.item_person));
+                    mPersonFragment = FragmentMine.newInstance(getString(R.string.item_person));
                 }
                 transaction.replace(R.id.sub_content, mPersonFragment);
                 break;

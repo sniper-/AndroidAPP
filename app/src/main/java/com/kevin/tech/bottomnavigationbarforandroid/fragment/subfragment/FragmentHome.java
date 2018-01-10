@@ -7,7 +7,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
-import android.widget.TextView;
 
 import com.kevin.tech.bottomnavigationbarforandroid.Constants;
 import com.kevin.tech.bottomnavigationbarforandroid.R;
@@ -20,16 +19,16 @@ import java.util.List;
 /**
  * Created by Kevin on 2016/11/28.
  * Blog:http://blog.csdn.net/student9128
- * Description: HomeFragment
+ * Description: FragmentHome
  */
 
-public class HomeFragment extends Fragment{
+public class FragmentHome extends Fragment{
 
     private List<HomeBean> mHomeBeanList = new ArrayList<>();
     private HomeAdapter mAapter;
 
-    public static HomeFragment newInstance(String s){
-        HomeFragment homeFragment = new HomeFragment();
+    public static FragmentHome newInstance(String s){
+        FragmentHome homeFragment = new FragmentHome();
         Bundle bundle = new Bundle();
         bundle.putString(Constants.ARGS,s);
         homeFragment.setArguments(bundle);

@@ -17,9 +17,9 @@ import com.kevin.tech.bottomnavigationbarforandroid.R;
  * Description:
  */
 
-public class LocationFragment extends Fragment{
-    public static LocationFragment newInstance(String s){
-        LocationFragment homeFragment = new LocationFragment();
+public class FragmentNotice extends Fragment{
+    public static FragmentNotice newInstance(String s){
+        FragmentNotice homeFragment = new FragmentNotice();
         Bundle bundle = new Bundle();
         bundle.putString(Constants.ARGS,s);
         homeFragment.setArguments(bundle);

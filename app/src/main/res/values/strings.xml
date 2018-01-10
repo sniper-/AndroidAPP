@@ -4,7 +4,7 @@
     <string name="drawer_layout_close">Close</string>
     <string name="blog_site">Blog:http://blog.csdn.net/student9128</string>
     <string name="nick_name">Kevin</string>
-    <string name="tips">Hello</string>
+    <string name="tips"></string>
     <string name="navigation_navigation_bar">NavigationBar</string>
     <string name="navigation_radio_bar">RadioGroup</string>
     <string name="navigation_tab_layout">TabLayout + ViewPager</string>

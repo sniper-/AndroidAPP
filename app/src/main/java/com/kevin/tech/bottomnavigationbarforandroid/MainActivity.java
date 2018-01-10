@@ -9,6 +9,7 @@ import android.view.View;
 
 import com.kevin.tech.bottomnavigationbarforandroid.fragment.TextTabFragment;
 
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextTabFragment mTextTabFragment;

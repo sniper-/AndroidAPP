@@ -17,9 +17,9 @@ import com.kevin.tech.bottomnavigationbarforandroid.R;
  * Description:
  */
 
-public class PersonFragment extends Fragment{
-    public static PersonFragment newInstance(String s){
-        PersonFragment homeFragment = new PersonFragment();
+public class FragmentMine extends Fragment{
+    public static FragmentMine newInstance(String s){
+        FragmentMine homeFragment = new FragmentMine();
         Bundle bundle = new Bundle();
         bundle.putString(Constants.ARGS,s);
         homeFragment.setArguments(bundle);
