@@ -1,4 +1,4 @@
-package com.kevin.tech.bottomnavigationbarforandroid.bean;
+package com.kevin.tech.qdchTest.bean;
 
 import java.io.Serializable;
 

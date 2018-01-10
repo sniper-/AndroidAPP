@@ -1,4 +1,4 @@
-package com.kevin.tech.bottomnavigationbarforandroid;
+package com.kevin.tech.qdchTest;
 
 import org.junit.Test;
 

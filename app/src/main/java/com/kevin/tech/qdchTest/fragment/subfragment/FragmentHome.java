@@ -1,4 +1,4 @@
-package com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment;
+package com.kevin.tech.qdchTest.fragment.subfragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,10 +8,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 
-import com.kevin.tech.bottomnavigationbarforandroid.Constants;
-import com.kevin.tech.bottomnavigationbarforandroid.R;
-import com.kevin.tech.bottomnavigationbarforandroid.adapter.HomeAdapter;
-import com.kevin.tech.bottomnavigationbarforandroid.bean.HomeBean;
+import com.kevin.tech.qdchTest.Constants;
+import com.kevin.tech.qdchTest.R;
+import com.kevin.tech.qdchTest.adapter.HomeAdapter;
+import com.kevin.tech.qdchTest.bean.HomeBean;
 
 import java.util.ArrayList;
 import java.util.List;

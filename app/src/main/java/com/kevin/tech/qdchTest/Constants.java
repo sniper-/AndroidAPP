@@ -1,4 +1,4 @@
-package com.kevin.tech.bottomnavigationbarforandroid;
+package com.kevin.tech.qdchTest;
 
 /**
  * Created by Kevin on 2016/11/28.

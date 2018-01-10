@@ -1,6 +1,5 @@
-package com.kevin.tech.bottomnavigationbarforandroid.adapter;
+package com.kevin.tech.qdchTest.adapter;
 
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.widget.BaseAdapter;
 
@@ -12,11 +11,10 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-import com.kevin.tech.bottomnavigationbarforandroid.bean.HomeBean;
-import com.kevin.tech.bottomnavigationbarforandroid.R;
+import com.kevin.tech.qdchTest.bean.HomeBean;
+import com.kevin.tech.qdchTest.R;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.kevin.tech.bottomnavigationbarforandroid.fragment;
+package com.kevin.tech.qdchTest.fragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -12,12 +12,12 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.kevin.tech.bottomnavigationbarforandroid.Constants;
-import com.kevin.tech.bottomnavigationbarforandroid.R;
-import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.FragmentHome;
-import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.FragmentDash;
-import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.FragmentNotice;
-import com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment.FragmentMine;
+import com.kevin.tech.qdchTest.Constants;
+import com.kevin.tech.qdchTest.R;
+import com.kevin.tech.qdchTest.fragment.subfragment.FragmentHome;
+import com.kevin.tech.qdchTest.fragment.subfragment.FragmentDash;
+import com.kevin.tech.qdchTest.fragment.subfragment.FragmentNotice;
+import com.kevin.tech.qdchTest.fragment.subfragment.FragmentMine;
 
 /**
  * Created by Kevin on 2016/11/29.

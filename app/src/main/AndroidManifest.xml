@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-          package="com.kevin.tech.bottomnavigationbarforandroid">
+          package="com.kevin.tech.qdchTest">
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".LaunchActivity"
+            android:name="com.kevin.tech.qdchTest.LaunchActivity"
             android:theme="@style/BaseTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -18,7 +18,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity" ></activity>
+        <activity android:name="com.kevin.tech.qdchTest.MainActivity" ></activity>
 
     </application>
 

@@ -1,4 +1,4 @@
-package com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment;
+package com.kevin.tech.qdchTest.fragment.subfragment;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,8 +8,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.kevin.tech.bottomnavigationbarforandroid.Constants;
-import com.kevin.tech.bottomnavigationbarforandroid.R;
+import com.kevin.tech.qdchTest.Constants;
+import com.kevin.tech.qdchTest.R;
 
 /**
  * Created by Kevin on 2016/11/28.
@@ -17,9 +17,9 @@ import com.kevin.tech.bottomnavigationbarforandroid.R;
  * Description:
  */
 
-public class FragmentMine extends Fragment{
-    public static FragmentMine newInstance(String s){
-        FragmentMine homeFragment = new FragmentMine();
+public class FragmentNotice extends Fragment{
+    public static FragmentNotice newInstance(String s){
+        FragmentNotice homeFragment = new FragmentNotice();
         Bundle bundle = new Bundle();
         bundle.putString(Constants.ARGS,s);
         homeFragment.setArguments(bundle);

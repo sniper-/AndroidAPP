@@ -1,4 +1,4 @@
-package com.kevin.tech.bottomnavigationbarforandroid;
+package com.kevin.tech.qdchTest;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
@@ -7,7 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.kevin.tech.bottomnavigationbarforandroid.fragment.TextTabFragment;
+import com.kevin.tech.qdchTest.fragment.TextTabFragment;
 
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {

@@ -1,4 +1,4 @@
-package com.kevin.tech.bottomnavigationbarforandroid.fragment.subfragment;
+package com.kevin.tech.qdchTest.fragment.subfragment;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -6,8 +6,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.kevin.tech.bottomnavigationbarforandroid.Constants;
-import com.kevin.tech.bottomnavigationbarforandroid.R;
+import com.kevin.tech.qdchTest.Constants;
+import com.kevin.tech.qdchTest.R;
 
 import java.util.ArrayList;
 import java.util.List;
