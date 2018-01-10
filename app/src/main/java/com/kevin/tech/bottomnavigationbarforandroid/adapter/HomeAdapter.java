@@ -1,0 +1,84 @@
+package com.kevin.tech.bottomnavigationbarforandroid.adapter;
+
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.widget.BaseAdapter;
+
+/**
+ * Created by sniper on 2018/1/10.
+ */
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.TextView;
+
+import com.kevin.tech.bottomnavigationbarforandroid.bean.HomeBean;
+import com.kevin.tech.bottomnavigationbarforandroid.R;
+
+import java.util.List;
+
+/**
+ * Created by sniper on 2017/10/25.
+ */
+
+public class HomeAdapter extends BaseAdapter {
+
+    private FragmentManager mFragment;
+    private List<HomeBean> mList;
+    private Context mContext;
+    private LayoutInflater mLayoutInflater;
+
+    /**
+     * 构造方法
+     * @return
+     */
+    public HomeAdapter(FragmentManager fragment, Context context, List<HomeBean> list) {
+        mFragment = fragment;
+        mContext = context;
+        mList = list;
+        mLayoutInflater = LayoutInflater.from(context);
+    }
+
+    @Override
+    public int getCount() {
+        return mList.size();
+    }
+
+    @Override
+    public Object getItem(int position) {
+        return mList.get(position);
+    }
+
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
+
+    private static class ViewHoder {
+        public TextView mTvHomeItemRemark;
+        public TextView mTvHomeItemContent;
+    }
+
+    @Override
+    public View getView(int position, View convertView, ViewGroup parent) {
+        ViewHoder viewHoder;
+        if(convertView == null) {
+            viewHoder = new ViewHoder();
+            convertView = mLayoutInflater.inflate(R.layout.list_item_home, null);
+            viewHoder.mTvHomeItemRemark = (TextView) convertView.findViewById(R.id.home_item_remark);
+            viewHoder.mTvHomeItemContent = (TextView) convertView.findViewById(R.id.home_item_content);
+            convertView.setTag(viewHoder);
+        } else {
+            viewHoder = (ViewHoder) convertView.getTag();
+        }
+
+        HomeBean bean = mList.get(position);
+        viewHoder.mTvHomeItemRemark.setText(bean.homeItemRemark);
+        viewHoder.mTvHomeItemContent.setText(bean.homeItemContent);
+
+        return convertView;
+    }
+}
