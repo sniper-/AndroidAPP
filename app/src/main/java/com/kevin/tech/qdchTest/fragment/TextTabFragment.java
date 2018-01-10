@@ -109,25 +109,82 @@ public class TextTabFragment extends Fragment implements View.OnClickListener {
                 if (mHomeFragment == null) {
                     mHomeFragment = mHomeFragment.newInstance(getString(R.string.item_home));
                 }
-                transaction.replace(R.id.sub_content, mHomeFragment);
+                /**
+                 * 防止每点击一次，fragment就重新加载一次数据导致数据重复
+                 */
+                if(mLocationFragment != null){
+                    transaction.hide(mLocationFragment);
+                }
+                if(mLikeFragment != null){
+                    transaction.hide(mLikeFragment);
+                }
+                if(mPersonFragment != null){
+                    transaction.hide(mPersonFragment);
+                }
+                if(!mHomeFragment.isAdded()){
+                    transaction.add(R.id.sub_content, mHomeFragment);
+                }else{
+                    transaction.show(mHomeFragment);
+                }
+
                 break;
             case 2:
                 if (mLocationFragment == null) {
                     mLocationFragment = FragmentNotice.newInstance(getString(R.string.item_location));
                 }
-                transaction.replace(R.id.sub_content, mLocationFragment);
+                if(mHomeFragment != null){
+                    transaction.hide(mHomeFragment);
+                }
+                if(mLikeFragment != null){
+                    transaction.hide(mLikeFragment);
+                }
+                if(mPersonFragment != null){
+                    transaction.hide(mPersonFragment);
+                }
+                if(!mLocationFragment.isAdded()){
+                    transaction.add(R.id.sub_content, mLocationFragment);
+                }else{
+                    transaction.show(mLocationFragment);
+                }
                 break;
             case 1:
                 if (mLikeFragment == null) {
                     mLikeFragment = FragmentDash.newInstance(getString(R.string.item_like));
                 }
-                transaction.replace(R.id.sub_content, mLikeFragment);
+                if(mLocationFragment != null){
+                    transaction.hide(mLocationFragment);
+                }
+                if(mHomeFragment != null){
+                    transaction.hide(mHomeFragment);
+                }
+                if(mPersonFragment != null){
+                    transaction.hide(mPersonFragment);
+                }
+                if(!mLikeFragment.isAdded()){
+                    transaction.add(R.id.sub_content, mLikeFragment);
+                }else{
+                    transaction.show(mLikeFragment);
+                }
                 break;
             case 3:
                 if (mPersonFragment == null) {
                     mPersonFragment = FragmentMine.newInstance(getString(R.string.item_person));
                 }
-                transaction.replace(R.id.sub_content, mPersonFragment);
+                if(mLocationFragment != null){
+                    transaction.hide(mLocationFragment);
+                }
+                if(mLikeFragment != null){
+                    transaction.hide(mLikeFragment);
+                }
+                if(mHomeFragment != null){
+                    transaction.hide(mHomeFragment);
+                }
+                if(!mPersonFragment.isAdded()){
+                    transaction.add(R.id.sub_content, mPersonFragment);
+                }else{
+                    transaction.show(mPersonFragment);
+                }
+
                 break;
         }
         transaction.commit();

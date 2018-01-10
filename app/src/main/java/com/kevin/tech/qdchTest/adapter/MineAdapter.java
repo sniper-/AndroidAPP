@@ -31,7 +31,6 @@ public class MineAdapter extends BaseAdapter {
 
     /**
      * 构造方法
-     * @return
      */
     public MineAdapter(FragmentManager fragment, Context context, List<MineBean> list) {
         mFragment = fragment;
