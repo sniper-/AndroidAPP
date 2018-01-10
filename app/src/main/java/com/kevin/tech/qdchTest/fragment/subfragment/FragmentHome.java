@@ -29,9 +29,9 @@ public class FragmentHome extends Fragment{
 
     public static FragmentHome newInstance(String s){
         FragmentHome homeFragment = new FragmentHome();
-        Bundle bundle = new Bundle();
-        bundle.putString(Constants.ARGS,s);
-        homeFragment.setArguments(bundle);
+//        Bundle bundle = new Bundle();
+//        bundle.putString(Constants.ARGS,s);
+//        homeFragment.setArguments(bundle);
         return homeFragment;
     }
 
@@ -39,11 +39,7 @@ public class FragmentHome extends Fragment{
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
-//        Bundle bundle = getArguments();
-//        String s = bundle.getString(Constants.ARGS);
-//        TextView textView = (TextView) view.findViewById(R.id.fragment_text_view);
-//        textView.setText(s);
-//        return view;
+
         initData();
         ListView viewList = (ListView) view.findViewById(R.id.lv_main);
         mAapter = new HomeAdapter(getChildFragmentManager(), getActivity() , mHomeBeanList);

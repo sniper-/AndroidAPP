@@ -36,9 +36,9 @@ import lecho.lib.hellocharts.view.LineChartView;
 public class FragmentDash extends Fragment {
     public static FragmentDash newInstance(String s) {
         FragmentDash homeFragment = new FragmentDash();
-        Bundle bundle = new Bundle();
-        bundle.putString(Constants.ARGS, s);
-        homeFragment.setArguments(bundle);
+//        Bundle bundle = new Bundle();
+//        bundle.putString(Constants.ARGS, s);
+//        homeFragment.setArguments(bundle);
         return homeFragment;
     }
 
