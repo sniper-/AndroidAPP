@@ -6,10 +6,16 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+import android.widget.ListView;
 
 import com.kevin.tech.qdchTest.Constants;
 import com.kevin.tech.qdchTest.R;
+import com.kevin.tech.qdchTest.adapter.MineAdapter;
+import com.kevin.tech.qdchTest.bean.HomeBean;
+import com.kevin.tech.qdchTest.bean.MineBean;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by Kevin on 2016/11/28.
@@ -18,6 +24,10 @@ import com.kevin.tech.qdchTest.R;
  */
 
 public class FragmentMine extends Fragment{
+
+    private List<MineBean> mMineBeanList = new ArrayList<>();
+    private MineAdapter mAapter;
+
     public static FragmentMine newInstance(String s){
         FragmentMine homeFragment = new FragmentMine();
         Bundle bundle = new Bundle();
@@ -29,11 +39,30 @@ public class FragmentMine extends Fragment{
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_sub_content, container, false);
-        Bundle bundle = getArguments();
-        String s = bundle.getString(Constants.ARGS);
-        TextView textView = (TextView) view.findViewById(R.id.fragment_text_view);
-        textView.setText(s);
+        View view = inflater.inflate(R.layout.fragment_mine, container, false);
+
+        initData();
+        ListView viewList = (ListView) view.findViewById(R.id.lv_mine);
+        mAapter = new MineAdapter(getChildFragmentManager(), getActivity() , mMineBeanList);
+        viewList.setAdapter(mAapter);
         return view;
+    }
+
+    private void initData() {
+        MineBean mineBean0 = new MineBean();
+        mineBean0.mineItemName = "我的市场";
+        mMineBeanList.add(mineBean0);
+
+        MineBean mineBean1 = new MineBean();
+        mineBean1.mineItemName = "我的足迹";
+        mMineBeanList.add(mineBean1);
+
+        MineBean mineBean2 = new MineBean();
+        mineBean2.mineItemName = "关注管理";
+        mMineBeanList.add(mineBean2);
+
+        MineBean mineBean3 = new MineBean();
+        mineBean3.mineItemName = "关于我们";
+        mMineBeanList.add(mineBean3);
     }
 }
