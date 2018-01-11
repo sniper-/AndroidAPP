@@ -17,15 +17,15 @@
         android:text="@string/item_home"/>
 
     <TextView
-        android:id="@+id/tv_location"
+        android:id="@+id/tv_dash"
         style="@style/viewpager_navigation_bar_tab_style"
-        android:drawableTop="@drawable/location"
+        android:drawableTop="@drawable/dash"
         android:text="@string/item_location"/>
 
     <TextView
         android:id="@+id/tv_like"
         style="@style/viewpager_navigation_bar_tab_style"
-        android:drawableTop="@drawable/like"
+        android:drawableTop="@drawable/search"
         android:text="@string/item_like"/>
 
     <TextView

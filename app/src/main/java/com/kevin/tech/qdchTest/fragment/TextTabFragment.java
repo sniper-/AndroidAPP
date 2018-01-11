@@ -46,7 +46,7 @@ public class TextTabFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_text_tab, container, false);
         mTextView = (TextView) view.findViewById(R.id.activity_text_view);
         mTHome = (TextView) view.findViewById(R.id.tv_home);
-        mTLocation = (TextView) view.findViewById(R.id.tv_location);
+        mTLocation = (TextView) view.findViewById(R.id.tv_dash);
         mTLike = (TextView) view.findViewById(R.id.tv_like);
         mTMe = (TextView) view.findViewById(R.id.tv_person);
         Log.d("Kevin", mTextView.getText().toString());
@@ -72,7 +72,7 @@ public class TextTabFragment extends Fragment implements View.OnClickListener {
     private void setDefaultFragment() {
         switchFrgment(0);
         //set the defalut tab state
-        setTabState(mTHome, R.drawable.home_fill, getColor(R.color.colorPrimary));
+        setTabState(mTHome, R.drawable.home_checked, getColor(R.color.colorPrimary));
     }
 
     @Override
@@ -80,19 +80,19 @@ public class TextTabFragment extends Fragment implements View.OnClickListener {
         resetTabState();//reset the tab state
         switch (view.getId()) {
             case R.id.tv_home:
-                setTabState(mTHome, R.drawable.home_fill, getColor(R.color.colorPrimary));
+                setTabState(mTHome, R.drawable.home_checked, getColor(R.color.colorPrimary));
                 switchFrgment(0);
                 break;
-            case R.id.tv_location:
-                setTabState(mTLocation, R.drawable.location_fill, getColor(R.color.colorPrimary));
+            case R.id.tv_dash:
+                setTabState(mTLocation, R.drawable.dash_checked, getColor(R.color.colorPrimary));
                 switchFrgment(1);
                 break;
             case R.id.tv_like:
-                setTabState(mTLike, R.drawable.like_fill, getColor(R.color.colorPrimary));
+                setTabState(mTLike, R.drawable.search_checked, getColor(R.color.colorPrimary));
                 switchFrgment(2);
                 break;
             case R.id.tv_person:
-                setTabState(mTMe, R.drawable.person_fill, getColor(R.color.colorPrimary));
+                setTabState(mTMe, R.drawable.person_checked, getColor(R.color.colorPrimary));
                 switchFrgment(3);
                 break;
         }
@@ -208,8 +208,8 @@ public class TextTabFragment extends Fragment implements View.OnClickListener {
      */
     private void resetTabState() {
         setTabState(mTHome, R.drawable.home, getColor(R.color.black_1));
-        setTabState(mTLocation, R.drawable.location, getColor(R.color.black_1));
-        setTabState(mTLike, R.drawable.like, getColor(R.color.black_1));
+        setTabState(mTLocation, R.drawable.dash, getColor(R.color.black_1));
+        setTabState(mTLike, R.drawable.search, getColor(R.color.black_1));
         setTabState(mTMe, R.drawable.person, getColor(R.color.black_1));
 
     }
