@@ -111,6 +111,7 @@ public class TextTabFragment extends Fragment implements View.OnClickListener {
                 }
                 /**
                  * 防止每点击一次，fragment就重新加载一次数据导致数据重复
+                 * 下拉刷新可以使用transaction.replace(fragment)实现
                  */
                 if(mLocationFragment != null){
                     transaction.hide(mLocationFragment);
